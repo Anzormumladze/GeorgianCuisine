@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import Button from './button';
 import ItemDescription from './itemDescription';
+import ItemDetails from './itemDetails';
 const FoodCard = props => {
   return (
     <View style={style.card}>
@@ -14,26 +14,7 @@ const FoodCard = props => {
       </View>
       <View style={style.text}>
         <Text style={style.food}>{props.item.name}</Text>
-        <View style={style.FlexContainer}>
-          <View style={style.FlexContainer}>
-            <Ionicons
-              name="ios-alarm"
-              color="purple"
-              size={20}
-              style={{marginRight: 10}}
-            />
-            <Text>{props.item.time} Mins </Text>
-          </View>
-          <View style={style.FlexContainer}>
-            <Text>Serves {props.item.serves} </Text>
-            <Ionicons
-              name="ios-people"
-              color="purple"
-              size={20}
-              style={{marginLeft: 10}}
-            />
-          </View>
-        </View>
+        <ItemDetails time={props.item.time} serves={props.item.serves} />
         <ItemDescription text={props.item.description} />
       </View>
       <Button text="LETS COOK" />
@@ -67,11 +48,6 @@ const style = StyleSheet.create({
     textAlign: 'center',
     letterSpacing: 0.1,
     fontSize: 20,
-  },
-  FlexContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
   },
 });
 
