@@ -1,8 +1,7 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {Button} from 'native-base';
-
+import Button from './button';
 const FoodCard = props => {
   return (
     <View style={style.card}>
@@ -42,9 +41,7 @@ const FoodCard = props => {
           {props.item.description}
         </Text>
       </View>
-      <Button full>
-        <Text style={{color: 'white'}}>LET'S COOK!</Text>
-      </Button>
+      <Button text="LETS COOK" />
     </View>
   );
 };
