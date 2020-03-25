@@ -1,16 +1,14 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {Text, StyleSheet} from 'react-native';
 
-const ItemDescription = () => {
-  return (
-    <View>
-      <Image
-        style={{width: 50, height: 50}}
-        source={require('../assets/image1.png')}
-        resizeMode={'cover'}
-      />
-    </View>
-  );
+const ItemDescription = props => {
+  return <Text style={style.itemTextContainer}>{props.text}</Text>;
 };
 
+const style = StyleSheet.create({
+  itemTextContainer: {
+    marginBottom: 20,
+    marginTop: 20,
+  },
+});
 export default ItemDescription;

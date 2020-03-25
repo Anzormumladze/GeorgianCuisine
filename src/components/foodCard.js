@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Button from './button';
+import ItemDescription from './itemDescription';
 const FoodCard = props => {
   return (
     <View style={style.card}>
@@ -33,13 +34,7 @@ const FoodCard = props => {
             />
           </View>
         </View>
-        <Text
-          style={{
-            marginBottom: 20,
-            marginTop: 20,
-          }}>
-          {props.item.description}
-        </Text>
+        <ItemDescription text={props.item.description} />
       </View>
       <Button text="LETS COOK" />
     </View>
