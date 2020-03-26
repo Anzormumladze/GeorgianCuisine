@@ -3,6 +3,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../pages/Home';
 import FavoritesScreen from '../pages/Favorites';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {createStackNavigator} from '@react-navigation/stack';
+import ItemReciept from '../components/itemReciept';
 
 const Tab = createBottomTabNavigator();
 
@@ -32,5 +34,15 @@ function MyTabs() {
     </Tab.Navigator>
   );
 }
+const Stack = createStackNavigator();
 
-export default MyTabs;
+function Nav() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Georgian Cuisine" component={MyTabs} />
+      <Stack.Screen name="RECIEPT" component={ItemReciept} />
+    </Stack.Navigator>
+  );
+}
+
+export default Nav;

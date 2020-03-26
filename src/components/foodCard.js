@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Button from './button';
 import ItemDescription from './itemDescription';
 import ItemDetails from './itemDetails';
+import {NavigationContainer} from '@react-navigation/native';
 const FoodCard = props => {
   return (
     <View style={style.card}>
