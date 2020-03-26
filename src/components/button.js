@@ -4,7 +4,9 @@ import {Button} from 'native-base';
 
 const ButtonContainer = props => {
   return (
-    <Button full>
+    <Button
+      full
+      onPress={() => props.navigation.props.navigation.push('RECIEPT')}>
       <Text style={style.buttonTextStyle}>{props.text}</Text>
     </Button>
   );

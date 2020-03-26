@@ -1,9 +1,8 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, Image, StyleSheet} from 'react-native';
 import Button from './button';
 import ItemDescription from './itemDescription';
 import ItemDetails from './itemDetails';
-import {NavigationContainer} from '@react-navigation/native';
 const FoodCard = props => {
   return (
     <View style={style.card}>
@@ -18,7 +17,7 @@ const FoodCard = props => {
         <ItemDetails time={props.item.time} serves={props.item.serves} />
         <ItemDescription text={props.item.description} />
       </View>
-      <Button text="LETS COOK" />
+      <Button text="LETS COOK" navigation={props} />
     </View>
   );
 };
