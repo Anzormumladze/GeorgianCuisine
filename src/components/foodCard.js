@@ -17,7 +17,11 @@ const FoodCard = props => {
         <ItemDetails time={props.item.time} serves={props.item.serves} />
         <ItemDescription text={props.item.description} />
       </View>
-      <Button text="LETS COOK" navigation={props} />
+      <Button
+        text="LETS COOK"
+        navigation={props}
+        description={props.item.ingredients}
+      />
     </View>
   );
 };

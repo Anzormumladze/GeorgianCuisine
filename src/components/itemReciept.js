@@ -2,10 +2,10 @@ import React from 'react';
 import {View, Text} from 'react-native';
 
 const ItemReciept = props => {
-  console.log(props);
+  console.log(props.route.params);
   return (
     <View>
-      <Text>ItemReciept</Text>
+      <Text>{props.route.params}</Text>
     </View>
   );
 };
